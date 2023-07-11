@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 app.use('/places', require('./controllers/places'))
 
 app.get("*", (req, res) => {
-    res.status(404).send("<h1>404 NOT FOUND</h1>")
+    res.render("error404")
 })
 
 // fire it up
