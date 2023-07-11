@@ -6,6 +6,9 @@ function home () {
       <Def>
           <main>
               <h1>HOME</h1>
+              <div>
+                <img src="/images/HoganAndre.webp" alt="Hulk and Andre" />
+              </div>
           </main>
       </Def>
     )
