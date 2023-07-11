@@ -3,6 +3,12 @@ h1 {
     color: cornflowerblue;
   }
 
+h4 {
+    font-style: italic;
+    text-align: center;
+    color: orangered;
+}
+
 img {
     max-width: 400px;
 }
