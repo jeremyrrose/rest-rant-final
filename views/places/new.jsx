@@ -5,7 +5,7 @@ const states = [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM
 
 function new_form () {
     return (
-        <Def>
+        <Def title={"Add a Place : RESTRant"}>
           <main>
             <h1>Add a New Place</h1>
             <form method="POST" action="/places">

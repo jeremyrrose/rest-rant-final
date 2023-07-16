@@ -3,7 +3,7 @@ const Def = require('../default')
 
 function show (data) {
     return (
-        <Def>
+        <Def title={data.place.name + " : RESTRant"}>
           <main>
             <h1>{data.place.name}</h1>
             <h4>{data.place.city}, {data.place.state}</h4>
