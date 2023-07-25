@@ -3,12 +3,17 @@ const Def = require('../default')
 
 function show (data) {
 
+    let stars = ''
     let comments = (
         <h3 className="inactive">
           No comments yet!
         </h3>
       )
       if (data.place.comments.length) {
+        let averageRating = Math.round(data.place.rating)
+        for (let i=0; i < averageRating; i++) {
+            stars += "⭐"
+        }
         comments = data.place.comments.map((c, index) => {
           return (
             <div key={index} className="border">
@@ -32,7 +37,7 @@ function show (data) {
             <p>Cuisine: {data.place.cuisines}</p>
             <p>
                 <h4>Rating</h4>
-                Currently unrated
+                {stars} / 5
             </p>
             <div className="edit-controls">
                 <a href={`/places/${data.place.id}/edit`} className="btn btn-warning"> 
