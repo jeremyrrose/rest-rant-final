@@ -3,6 +3,7 @@ const db = require('../models')
 
 router.get('/', (req, res) => {
     db.Place.find()
+    .limit(40)
     .then((places) => {
       res.render('places/index', { places })
     })
@@ -38,7 +39,7 @@ router.get('/new', (req, res) => {
 
 router.get('/:id', (req, res) => {
     db.Place.findById(req.params.id)
-    .populate('comments')
+    .populate({ path: 'comments', options: { limit: 10 } })
     .then(place => {
         res.render('places/show', { place })
     })

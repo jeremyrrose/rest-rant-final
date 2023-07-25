@@ -65,7 +65,7 @@ function show (data) {
                     <label htmlFor="state">Rant?</label>
                     <input type="checkbox" id="rant" name="rant" />
                 </div>
-                <input className="btn btn-primary" type="submit" defaultValue="Add Place" />
+                <input className="btn btn-primary" type="submit" defaultValue="Add Review" />
             </form>
             <div className="comments">
                 <h2>Comments</h2>

@@ -21,7 +21,7 @@ placeSchema.methods.showEstablished = function () {
 }
 
 placeSchema.pre('save', async function() {
-  const allComments = await Promise.all(this.comments.map(async id => Comment.findById(id)))
+  const allComments = await Promise.all(this.comments.map(async id => await Comment.findById(id).select('stars')))
   this.rating = allComments.reduce((acc,cur)=>acc+cur.stars,0) / allComments.length
 })
 
