@@ -6,10 +6,9 @@ function show (data) {
         <Def title={data.place.name + " : RESTRant"}>
           <main>
             <h1>{data.place.name}</h1>
-            <h4>{data.place.city}, {data.place.state}</h4>
             <img src={data.place.pic} alt={data.place.name} />
-            <p>Serving: {data.place.cuisines}</p>
-            {data.place.founded? <p>Founded: {data.place.founded}</p> : null}
+            <h3>{data.place.showEstablished()}</h3>
+            <p>Cuisine: {data.place.cuisines}</p>
             <p>
                 <h4>Rating</h4>
                 Currently unrated
