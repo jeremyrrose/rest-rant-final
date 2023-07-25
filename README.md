@@ -15,3 +15,9 @@ If you'd like to seed the database, run:
 ```bash
 node seed
 ```
+
+To start the server:
+
+```bash
+nodemon
+```
