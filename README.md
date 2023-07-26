@@ -10,6 +10,13 @@ You'll need all those node modules, right?
 npm install
 ```
 
+Create a `.env` file and add:
+
+```bash
+MONGO_URI=mongodb://127.0.0.1:27017/places
+PORT=3000
+```
+
 If you'd like to seed the database, run:
 
 ```bash
